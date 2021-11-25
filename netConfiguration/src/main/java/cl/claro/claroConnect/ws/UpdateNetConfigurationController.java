@@ -1,13 +1,11 @@
 package cl.claro.claroConnect.ws;
 
-import java.util.List;
-
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import cl.claro.claroConnect.to.Action;
+import cl.claro.claroConnect.to.RequestUpd;
 import cl.claro.claroConnect.to.Response;
 
 
@@ -16,7 +14,7 @@ import cl.claro.claroConnect.to.Response;
 public class UpdateNetConfigurationController {
 	
 	@PutMapping
-	public Response update(@RequestParam ("imsi") String imsi, @RequestParam ("msisdn") String msisdn,@RequestParam ("plan") String plan, @RequestParam ("services") String services, @RequestParam (required = false, name="actionList") List<Action> actionList) {
+	public Response update(@RequestBody RequestUpd request) {
 		return new Response (0,"success",12345) ;
 	}
 

@@ -34,6 +34,14 @@ public class Constant {
 	public static final String ERROR_REQUIRED_INVALID_VALUE = "error.req.parameter";
 	public static final String ERROR_INVALID_VALUE = "error.invalid";
 	
+	public static final String DATASOURCE = "JDBC ClaroConnect";
+	public static final String BASE_SQL_EXCEPTION = "SQLException ";
+    public static final String GET_CONNECTION_NAMING_EXCEPTION_MSG = "NamingException while obtaning the application Context: ";
+    public static final String GET_CONNECTION_SQL_EXCEPTION_MSG = BASE_SQL_EXCEPTION + "while geting the Connection from the DataSource : ";
+    public static final String CLOSE_RESULTSET_EXCEPTION_MSG = BASE_SQL_EXCEPTION + "while closing resultset: ";
+    public static final String CLOSE_CALLABLESTATEMENT_EXCEPTION_MSG = "SQLException while closing callable statement: ";
+    public static final String CLOSE_CONNECTION_EXCEPTION_MSG = BASE_SQL_EXCEPTION + "while closing prepared statement: ";
+	
 
 }
 
