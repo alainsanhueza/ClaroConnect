@@ -1,5 +1,7 @@
 package cl.claro.claroConnect.util;
 
+import org.apache.logging.log4j.message.Message;
+
 public class Constant {
 
 	Constant() {
@@ -27,7 +29,10 @@ public class Constant {
 	public static final int CODE_9= 9;
 	public static final int CODE_10= 10;
 	
+	public static final int COD_ERROR_PARAMETROS= 10;
+	
 	public static final String SUCCESS = "Success";
+	public static final String MSG_ERROR_EXCEPTION = "error";
 	
 
 	public static final String ERROR_MISS_PARAMETER = "error.miss";
@@ -43,5 +48,15 @@ public class Constant {
     public static final String CLOSE_CONNECTION_EXCEPTION_MSG = BASE_SQL_EXCEPTION + "while closing prepared statement: ";
 	
 
+    public static final String IMSI = "Imsi";
+    public static final String MSISDN = "msisdn";
+    public static final String PLAN = "plan";
+    public static final String SERVICES = "services";
+
+
+
+    public static final String CONECBDD= "Conectado a BD....";
+    
+    
 }
 
