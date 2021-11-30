@@ -5,5 +5,6 @@ import cl.claro.claroConnect.model.Plan;
 
 
 public interface BuscaPlan {
-	public Plan planXCodPlan (String plan) throws NetConfigurationException;
+	public Plan planXCodPlan (String descplan) throws NetConfigurationException;
+	public String serviciosxcod (String nombreServicio) throws NetConfigurationException;
 }

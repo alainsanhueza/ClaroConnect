@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import cl.claro.claroConnect.dao.BuscaPlan;
+import cl.claro.claroConnect.dao.BuscaPlanImpl;
+import cl.claro.claroConnect.model.Plan;
 import cl.claro.claroConnect.to.RequestUpd;
 import cl.claro.claroConnect.to.Response;
 import cl.claro.claroConnect.util.Constant;
@@ -41,10 +44,18 @@ public class UpdateNetConfigurationController {
 			}
 			
 			if(request.getPlan().isEmpty()) {
+				
+				BuscaPlan burcanPlan = new BuscaPlanImpl();
+				Plan plan = new Plan();
+				plan = burcanPlan.planXCodPlan(request.getPlan());
+				
+				plan.getCod_plan();
+				
 				return new Response (0,Constant.SUCCESS,12345) ;
 			}else {
 				return new Response (0,Constant.ERROR_REQUIRED_INVALID_VALUE,12345) ;	
 			}
+						
 			
 		} catch (Exception e) {
 			// TODO: handle exception

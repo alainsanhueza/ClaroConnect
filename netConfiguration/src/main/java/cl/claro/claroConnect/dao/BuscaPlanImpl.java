@@ -29,13 +29,16 @@ public class BuscaPlanImpl implements BuscaPlan{
         	logger.info(Constant.CONECBDD);
         	
             conn = ConfigConexion.getConnection();
-            String sql = String.format("SELECT original_task_id FROM %s WHERE task_id = '%s' and state='%s' LIMIT 1");
+            String sql = String.format("SELECT * FROM TBL_PLAN WHERE DES_PLAN = "+ plan);
             
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             rs = preparedStatement.executeQuery();
             
             if (rs.next()) {
-                return new Plan();
+            	Plan planBD = new Plan();
+            	planBD.setCod_plan(rs.getString(0));
+            	planBD.setDesc_plan(rs.getString(1));
+                return planBD;
               }
             
         } catch (SQLException s) {
@@ -47,6 +50,12 @@ public class BuscaPlanImpl implements BuscaPlan{
             ConfigConexion.closeConnection(conn);
         }
 		
+		return null;
+	}
+
+	@Override
+	public String serviciosxcod(String nombreServicio) throws NetConfigurationException {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
