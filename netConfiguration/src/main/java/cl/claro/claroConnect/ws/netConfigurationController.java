@@ -37,19 +37,8 @@ public class netConfigurationController {
 
 	@PostMapping
 	public Response set(@RequestBody Request request) {
-		System.out.println(request);
+		/* 
 		
-		
-		
-		
-		GenerateTokenCUDBService tokenws = new GenerateTokenCUDBService();
-		GenerateTokenResponseTO response = new GenerateTokenResponseTO();
-		Generatetokencudbws asdsa = tokenws.getGeneratetokencudbws();
-		//response = asdsa.generatetokencudbws();
-		//response.getCodeError();
-		//response.getMessageError();
-		
-		//System.out.println(response.getToken());
 		
 		try {
 			Cai3GImplPortBindingStub cai3g = new Cai3GImplPortBindingStub();
@@ -195,9 +184,8 @@ public class netConfigurationController {
 			e.printStackTrace();
 			return new Response (200,e.getMessage(),1234) ;
 		}
-		
-		
-		
+		*/
+			
 		return new Response (0,"success",1234) ;
 	}
 }

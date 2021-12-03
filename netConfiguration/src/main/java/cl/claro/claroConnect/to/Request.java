@@ -9,8 +9,15 @@ public class Request {
 	private String imsi2;
 	private String msisdn2;
 	private String plan2;
+	private String servicio;
 	
 	
+	public String getServicio() {
+		return servicio;
+	}
+	public void setServicio(String servicio) {
+		this.servicio = servicio;
+	}
 	public String getImsi() {
 		return imsi;
 	}
@@ -54,7 +61,7 @@ public class Request {
 		this.plan2 = plan2;
 	}
 	public Request(String imsi, String msisdn, String plan, String productID, String imsi2, String msisdn2,
-			String plan2) {
+			String plan2, String servicio) {
 		super();
 		this.imsi = imsi;
 		this.msisdn = msisdn;
@@ -63,7 +70,10 @@ public class Request {
 		this.imsi2 = imsi2;
 		this.msisdn2 = msisdn2;
 		this.plan2 = plan2;
+		this.servicio = servicio;
 	}
+	
+	
 	
 
 	
