@@ -61,6 +61,7 @@ public class Constant {
     public static final String PLAN = "plan";
     public static final String SERVICES = "services";
     
+    public static final String SUBSCRIPTION = "Subscription@http://schemas.ericsson.com/ema/UserProvisioning/GsmHlr/";
     //MOAttributes - camel
     public static final String GSM_SUBSCRIPTION = "gsm:createSubscription";
     public static final String GSM_MSISDN = "gsm:msisdn";
